@@ -7,7 +7,15 @@ function changeColor(){
 
 	colorBox.style.backgroundColor = "rgb("+red+"," +blue+ "," +green+")";
 }
+function lockScreen(){
+	document.documentElement.requestFullscreen();
 
+}
+function unlockScreen(){
+	document.exitFullscreen();
+}
 document.addEventListener('touchstart', changeColor);
+
+
 
 
