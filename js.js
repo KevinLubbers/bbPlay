@@ -6,7 +6,7 @@ function changeColor(){
 	const green = Math.random() * 100;
 	const blue = Math.random() * 100;
 
-	colorBox.style.backgroundColor = rgb(red,blue,green);
+	colorBox.style.backgroundColor = "rgb("+red+"," +blue+ "," +green+")";
 }
 
 document.addEventListener('touchstart', changeColor);
