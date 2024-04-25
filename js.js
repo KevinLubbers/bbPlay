@@ -16,11 +16,19 @@ function unlockScreen(){
 }
 document.addEventListener('touchstart', changeColor);
 document.addEventListener('touchcancel', changeColor);
-document.addEventListener('touchend', changeColor);
+document.addEventListener('touchend', function(event){
+	event.preventDefault();
+});
 document.addEventListener('touchmove', changeColor);
-document.addEventListener('scroll', changeColor);
+document.addEventListener('scroll', function(event){
+	event.preventDefault();
+});
 document.addEventListener('click', changeColor);
-document.addEventListener('pointerdown', changeColor);
-document.addEventListener('pointerup', changeColor);
+document.addEventListener('pointerdown', function(event){
+	event.preventDefault();
+});
+document.addEventListener('pointerup', function(event){
+	event.preventDefault();
+});
 
 
