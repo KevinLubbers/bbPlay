@@ -1,13 +1,11 @@
-body, html {
-	height: 100%;
-	margin: 0;
-	overflow:hidden;
+body {
+	margin:auto;
 }
 
-#contentWindow {
-	height:100%;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	background-color:rgb(25%, 25%, 25%);
+#mainStage {
+	height:100vh;
+	width:100vw;
+	padding:0;
+	overflow:hidden;
+	
 }

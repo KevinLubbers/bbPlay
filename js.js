@@ -1,7 +1,6 @@
-const colorBox = document.getElementById('contentWindow');
+const colorBox = document.getElementById('mainStage');
 
 function changeColor(){
-	event.preventDefault();
 	const red = Math.random() * 250;
 	const green = Math.random() * 250;
 	const blue = Math.random() * 250;
