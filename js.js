@@ -1,7 +1,8 @@
 const colorBox = document.getElementById('mainStage');
+const eventBox = document.getElementById('eventBox');
 let canChangeColor = true;
 
-function changeColor(){
+function changeColor(eventType){
 	if (canChangeColor){
 		
 		const red = Math.random() * 250;
@@ -9,6 +10,7 @@ function changeColor(){
 		const blue = Math.random() * 250;
 
 		colorBox.style.backgroundColor = "rgb("+red+","+blue+","+green+")";
+		eventBox.innerHTML = "Event: " + eventType
 		
 		canChangeColor = false;
 		setTimeout(function(){
@@ -23,19 +25,16 @@ function lockScreen(){
 function unlockScreen(){
 	document.exitFullscreen();
 }
-document.addEventListener('touchstart', changeColor);
-document.addEventListener('touchcancel', changeColor);
-document.addEventListener('touchend', function(event){
-});
-document.addEventListener('touchmove', changeColor);
-document.addEventListener('scroll', function(event){
-	
-});
-document.addEventListener('click', changeColor);
-document.addEventListener('pointerdown', function(event){
-});
-document.addEventListener('pointerup', function(event){
-	event.preventDefault();
+document.addEventListener('touchstart', () => changeColor('touchstart'));
+document.addEventListener('touchcancel', () => changeColor('touchcancel'));
+document.addEventListener('touchend', () => changeColor('touchend'));
+document.addEventListener('touchmove', () => changeColor('touchmove'));
+document.addEventListener('scroll', () => changeColor('scroll'));
+
+document.addEventListener('click', () => changeColor('click'));
+document.addEventListener('pointerdown', () => changeColor('pointerdown'));
+document.addEventListener('pointerup', () => {
+    changeColor('pointerup');
 });
 
 

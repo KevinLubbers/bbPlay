@@ -9,3 +9,16 @@ body {
 	overflow:hidden;
 	
 }
+
+#contentWindow {
+	margin-top:30vh;
+	display:flex;
+	justify-content:center;
+	flex-direction:row;
+}
+
+.uiButton {
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+}
