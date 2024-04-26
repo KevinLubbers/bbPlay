@@ -11,7 +11,7 @@ body {
 }
 
 #contentWindow {
-	margin-top:30vh;
+	margin-top:50vh;
 	display:flex;
 	justify-content:center;
 	flex-direction:row;
