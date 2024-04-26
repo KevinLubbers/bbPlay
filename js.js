@@ -1,11 +1,20 @@
 const colorBox = document.getElementById('mainStage');
+let canChangeColor = true;
 
 function changeColor(){
-	const red = Math.random() * 250;
-	const green = Math.random() * 250;
-	const blue = Math.random() * 250;
+	if (canChangeColor){
+		
+		const red = Math.random() * 250;
+		const green = Math.random() * 250;
+		const blue = Math.random() * 250;
 
-	colorBox.style.backgroundColor = "rgb("+red+"," +blue+ "," +green+")";
+		colorBox.style.backgroundColor = "rgb("+red+","+blue+","+green+")";
+		
+		canChangeColor = false;
+		setTimeout(function(){
+			canChangeColor = true;
+		}, 2000);
+	}
 }
 function lockScreen(){
 	document.documentElement.requestFullscreen();
