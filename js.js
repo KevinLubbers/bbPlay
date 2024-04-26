@@ -56,7 +56,7 @@ document.addEventListener('touchstart', () => changeColor('touchstart'));
 document.addEventListener('touchcancel', () => changeColor('touchcancel'));
 document.addEventListener('touchend', () => changeColor('touchend')); 
 document.addEventListener('touchmove', function(e) { createColorDot(e); });
-document.addEventListener('scroll', () => changeColor('scroll'));
+document.addEventListener('scroll', () => function(e) { createColorDot(e); });
 
 document.addEventListener('click', () => changeColor('click'));
 document.addEventListener('pointerdown', () => function(e) { createColorDot(e); });
