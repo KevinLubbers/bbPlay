@@ -12,12 +12,11 @@ body {
 	
 }
 #contentWindow {
-	margin:auto;
 	display:flex;
 	justify-content:center;
 }
 #uiDiv{
-	margin-top:80vh;
+	margin-top:90vh;
 	display:flex;
 	flex-direction:row;
 }
